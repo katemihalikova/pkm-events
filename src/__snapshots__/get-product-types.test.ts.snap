@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`getProductTypes 1`] = `
+[
+  {
+    "Acronym": "Pokémon TCG",
+    "Id": 1,
+    "Is_Active": true,
+    "Label": "Pokémon Trading Card Game",
+    "Order": 1,
+    "Value": "tcg",
+  },
+  {
+    "Acronym": "VG",
+    "Id": 2,
+    "Is_Active": true,
+    "Label": "Video Games",
+    "Order": 2,
+    "Value": "vg",
+  },
+  {
+    "Acronym": "Pokémon GO",
+    "Id": 3,
+    "Is_Active": true,
+    "Label": "Pokémon GO",
+    "Order": 3,
+    "Value": "pgo",
+  },
+]
+`;

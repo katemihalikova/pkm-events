@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`getEventSubtypes 1`] = `
+[
+  {
+    "Id": 1,
+    "Is_Active": true,
+    "Label": "Competitive Tournament",
+    "Order": 1,
+  },
+  {
+    "Id": 2,
+    "Is_Active": true,
+    "Label": "Friendly Tournament",
+    "Order": 2,
+  },
+]
+`;
