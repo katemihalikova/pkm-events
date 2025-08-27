@@ -96,7 +96,7 @@ test("getEventsByGuid", async () => {
       expect((event as any).Events.Series.Name).toBe("");
       expect((event as any).Events.Series.Tags).keys("List", "EmptyListItem");
       expect((event as any).Events.Series.Tags.List).toHaveLength(0);
-      expect(event.Events.Status).toBe("pending");
+      expect(event.Events.Status).toBeOneOf(["pending", "active"]);
       expect(event.EventBadge).toBe(`/OPPlayerApp/img/OPPlayerApp.${Badge.LEAGUE_SESSION}.png`);
       expect(event.EventTypeName).toBe(EventTypeName.LEAGUE_SESSION);
       expect((event as any).SpecialEventDescription).toBe("");

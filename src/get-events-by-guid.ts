@@ -36,7 +36,7 @@ export interface PlaySession {
   Events: CommonEvent & {
     Activity_type: "play_session";
     Subtype: "open_play";
-    Status: "pending";
+    Status: "pending" | "active";
   },
   EventBadge: `/OPPlayerApp/img/OPPlayerApp.${Badge.LEAGUE_SESSION}.png`;
   EventTypeName: "League";
