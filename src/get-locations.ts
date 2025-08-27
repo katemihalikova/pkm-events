@@ -1,6 +1,7 @@
 import {
   headers,
   prepareBody,
+  warnOnce,
   type ApiResponse,
   type GroupType,
   type StringifiedNumber,
@@ -45,8 +46,8 @@ export async function getLocations(latitude: number, longitude: number, range: 5
     }>;
 
   if (!response.ok || "exception" in body) throw body;
-  if (body.versionInfo.hasModuleVersionChanged) throw new Error("Website version has changed, package update is needed!");
-  if (body.versionInfo.hasApiVersionChanged) throw new Error("Endpoint version has changed, package update is needed!");
+  if (body.versionInfo.hasModuleVersionChanged) warnOnce("Website version has changed, package update might be needed!");
+  if (body.versionInfo.hasApiVersionChanged) warnOnce("Endpoint version for getLocations has changed, package update might be needed!");
 
   return body.data.Locations.List;
 }

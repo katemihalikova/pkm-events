@@ -8,7 +8,7 @@ export const headers = {
 export function prepareBody(apiVersion: string, data?: { viewName?: string, clientVariables?: object, screenDataVariables?: object }) {
   return JSON.stringify({
     versionInfo: {
-      moduleVersion: "TeV5F9KKUuruRNuPJ6RtRA",
+      moduleVersion: "PJWDQkleVESGoyz+ZdlXcw",
       apiVersion,
     },
     viewName: data?.viewName ?? "MainFlow.Home",
@@ -118,4 +118,11 @@ export enum SeriesTag {
   LEAGUE_CHALLENGE = "league_challenge",
   LEAGUE_CUP = "league_cup",
   PRERELEASE = "prerelease",
+}
+
+let warned = new Set();
+export function warnOnce(warning: string) {
+  if (warned.has(warning)) return;
+  warned.add(warning);
+  console.warn(warning);
 }

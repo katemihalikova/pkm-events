@@ -24,5 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
+      - name: Run tests without failing on warnings
         run: npm test
+
+      - name: Run tests with failing on warnings
+        run: npm run test:fail-on-console

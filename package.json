@@ -10,12 +10,14 @@
   "scripts": {
     "build": "tsc && vite build",
     "test": "vitest",
+    "test:fail-on-console": "FAIL_ON_CONSOLE=1 vitest",
     "finalize": "npm run build && node package.json-template.js > dist/package.json && cd dist && git tag -s -m v$VERSION v$VERSION && git push origin tag v$VERSION && npm publish --otp $OTP"
   },
   "devDependencies": {
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-dts": "^4.5.4",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "vitest-fail-on-console": "^0.9.0"
   }
 }
