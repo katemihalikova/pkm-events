@@ -69,7 +69,7 @@ test("getEventsByGuid", async () => {
       expect(event.Events.Address.Longitude).toMatch(/^[+-]?\d+(?:.\d*)?$/);
       expect(event.Events.Address.Timezone).toBeTypeOf("string");
       expect(event.Events.Address.Timezone).not.toBe("");
-      expect((event as any).Events.Details).toBe("");
+      expect(event.Events.Details).toBeTypeOf("string");
       expect((event as any).Events.Event_website).toBe("");
       expect((event as any).Events.Third_party_registration_website).toBe("");
       expect((event as any).Events.Registration_start).toBe("");

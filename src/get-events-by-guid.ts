@@ -29,6 +29,7 @@ interface CommonEvent {
     Longitude: StringifiedNumber;
     Timezone: string;
   };
+  Details: string;
   Status: string;
 }
 
@@ -49,7 +50,6 @@ export interface LocalEvent {
     Name: string;
     Display_id: `${number}-${number}-${number}`; // "25-09-012345",
     Category: Category;
-    Details: string;
     Event_website: Link | "";
     // Activity_division_info: {
     //   Juniors: {
