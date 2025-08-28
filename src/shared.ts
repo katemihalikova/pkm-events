@@ -3,6 +3,8 @@ export const headers = {
   "content-type": "application/json; charset=UTF-8",
   "accept": "application/json",
   "x-csrftoken": "T6C+9iB49TLra4jEsMeSckDMNhQ=",
+  "cookie": `reese84=3:vAg34R+gb039MiBXIEPnvg==:B4R8Zwn6diWxY1PAl7jwutddmQ7ew4J5q45IA5WtkOjxx8Yk1yDM0lYm7PkrEiz+Dkw92HqBT71W83tYlAycc0iMN3mbJcHO+TyZqhD8cqNPCZ/HEjd3989+2+XkY3JQNiemBic4gzAQda72KExNoeUiBu1SLY8bIcJpJi0kfJRhTNerpy9+OSPQMrEIxO/uzOZIy6bGdiE+sz42SVl8x9jmQspfQ53QzLfjsTEzdfUXkvarfBQsx3hgQVYmvuZ+QstaSr/NDMCCJgk+/vGYq/gC6T/Sp0hH/ttnTjAeIusfkG5Pjhf0uwV50BPy7ayVWqV5cgfovv18sqMjTIGRZguUgdD+6FKWGhDuLhI0ZCoEj21JC0k67QUSm/7eMAVp0xJ1NcGT8fEzaOzBfTWft6BVUfrbmOh8bj8Gf3wHMnPks7RNxQNniVYVVmZ9AvDq4KkEhakNPWj4bbMVA6+4WQ==:K4YZSdYofdGirMvZIPiXBcxehvfNP2yyns4vq9h9Bno=`,
+  "Referer": "https://events.pokemon.com/EventLocator/Home?locale=en-US&range=100&iskm=false",
 };
 
 export function prepareBody(apiVersion: string, data?: { viewName?: string, clientVariables?: object, screenDataVariables?: object }) {

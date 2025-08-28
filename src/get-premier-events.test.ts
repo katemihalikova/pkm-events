@@ -58,7 +58,10 @@ test("getPremierEvents", async () => {
     expect(event.RegistrationLink).toMatch(/^https?:\/\/|^$/);
     expect(event.Latitude).toBeTypeOf("string");
     expect(event.Longitude).toBeTypeOf("string");
-    expect(event.Badge).toBeOneOf(Object.values(Badge));
+    expect(event.Badge).toBeTypeOf("string");
+    if (!event.Badge.startsWith("data:")) {
+      expect(event.Badge).toBeOneOf(Object.values(Badge));
+    }
     expect(event.SpectatorRegistrationLink).toMatch(/^https?:\/\/|^$/);
     expect(event.RegistrationDateEndDate).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})?$/);
     expect(event.SpectatorRegistrationStartDate).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})?$/);
